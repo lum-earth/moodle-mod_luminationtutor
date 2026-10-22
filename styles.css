@@ -1,0 +1,21 @@
+.mod_luminationtutor-history {
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.mod_luminationtutor-question {
+    margin-left: 1.5rem;
+    background-color: var(--bs-primary-bg-subtle, #e7f1ff);
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.mod_luminationtutor-reply {
+    margin-right: 1.5rem;
+    background-color: var(--bs-tertiary-bg, #f8f9fa);
+    overflow-wrap: anywhere;
+}
+
+.mod_luminationtutor-reply p:last-child {
+    margin-bottom: 0;
+}

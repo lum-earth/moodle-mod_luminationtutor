@@ -58,6 +58,12 @@ class tutor {
     /** @var int Messages shown in the chat when the page loads. */
     public const HISTORY_LENGTH = 20;
 
+    /**
+     * @var string Put before each question sent to the API (not stored or shown). Without it the tutor
+     *             answered a Spanish question about a Spanish document in English (23 Oct 2026).
+     */
+    public const LANGUAGE_INSTRUCTION = 'Answer in the same language as the student\'s question below.';
+
     /** @var string Table of conversations. */
     private const CONV_TABLE = 'luminationtutor_conv';
 
@@ -287,7 +293,7 @@ class tutor {
         }
 
         $conv = $this->start_conversation($userid, $document->get_contenthash());
-        $request = ['message' => $message];
+        $request = ['message' => self::LANGUAGE_INSTRUCTION . "\n\n" . $message];
         if ($conv->conversationid) {
             $request['conversation_id'] = $conv->conversationid;
         } else {

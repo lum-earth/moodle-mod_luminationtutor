@@ -109,7 +109,10 @@ final class tutor_test extends \advanced_testcase {
         $this->assertStringContainsString('<strong>Pell</strong>', $tutor->format_reply($msg));
 
         $tutor->send($user->id, 'Is it made of ice?', $client);
-        $this->assertSame(['message' => 'Is it made of ice?', 'conversation_id' => 'conv-1'], $client->posts[1]['data']);
+        $this->assertSame([
+            'message' => tutor::LANGUAGE_INSTRUCTION . "\n\nIs it made of ice?",
+            'conversation_id' => 'conv-1',
+        ], $client->posts[1]['data']);
         $this->assertCount(2, $tutor->get_history($user->id));
 
         // Nothing that identifies the student goes to the API.

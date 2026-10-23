@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.1.1 (2026-10-23)
+
+- Adds `db/upgrade.php`, which the Moodle Marketplace requires for activity modules. No other changes; v0.1.0 was not published.
+
 ## v0.1.0 (2026-10-22)
 
 - First release. A course activity where students ask an AI tutor questions and get answers from a document the teacher adds (PDF, DOCX or TXT).

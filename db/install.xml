@@ -27,7 +27,7 @@
         <FIELD NAME="luminationtutorid" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false"/>
         <FIELD NAME="userid" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false"/>
         <FIELD NAME="conversationid" TYPE="char" LENGTH="64" NOTNULL="false" SEQUENCE="false" COMMENT="AI Tutor conversation_id, set after the first message"/>
-        <FIELD NAME="documenthash" TYPE="char" LENGTH="40" NOTNULL="true" DEFAULT="" SEQUENCE="false" COMMENT="Content hash of the source document the conversation is grounded on"/>
+        <FIELD NAME="documenthash" TYPE="char" LENGTH="40" NOTNULL="true" SEQUENCE="false" COMMENT="Content hash of the source document the conversation is grounded on"/>
         <FIELD NAME="timecreated" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false"/>
         <FIELD NAME="timemodified" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false"/>
       </FIELDS>
@@ -44,12 +44,12 @@
       <FIELDS>
         <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
         <FIELD NAME="convid" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false"/>
-        <FIELD NAME="conversationid" TYPE="char" LENGTH="64" NOTNULL="true" DEFAULT="" SEQUENCE="false" COMMENT="AI Tutor conversation_id the message belongs to; a new document starts a new one"/>
+        <FIELD NAME="conversationid" TYPE="char" LENGTH="64" NOTNULL="true" SEQUENCE="false" COMMENT="AI Tutor conversation_id the message belongs to; a new document starts a new one"/>
         <FIELD NAME="luminationtutorid" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false"/>
         <FIELD NAME="userid" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false"/>
         <FIELD NAME="message" TYPE="text" NOTNULL="true" SEQUENCE="false" COMMENT="The question as the user typed it"/>
         <FIELD NAME="reply" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="The tutor's reply (Markdown)"/>
-        <FIELD NAME="requestid" TYPE="char" LENGTH="64" NOTNULL="true" DEFAULT="" SEQUENCE="false" COMMENT="AI Tutor request_id to poll"/>
+        <FIELD NAME="requestid" TYPE="char" LENGTH="64" NOTNULL="true" SEQUENCE="false" COMMENT="AI Tutor request_id to poll"/>
         <FIELD NAME="status" TYPE="char" LENGTH="20" NOTNULL="true" DEFAULT="pending" SEQUENCE="false" COMMENT="pending, completed or failed"/>
         <FIELD NAME="timecreated" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false"/>
         <FIELD NAME="timemodified" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false"/>
